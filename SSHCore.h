@@ -6,6 +6,11 @@
  *
  * Copyright (c) 2010 Luke D Hagan
  * All rights reserved.
+ * 
+ * Includes a copy of libssh2, an open-source library released
+ * under the BSD licence. libssh2 is copyright the libssh2 team
+ * and respective authors. See http://www.libssh2.org for more
+ * information.
  *
  * Redistribution and use in source and binary forms,
  * with or without modification, are permitted provided
