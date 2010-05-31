@@ -8,7 +8,7 @@ is also quite subject to change. The long-term goal of the project is to provide
 framework that allows Cocoa applications (including iPhone) to interact with SSH servers. The
 present implementation can:
 
-* run commands on the remote server,
+* run commands on the remote server
 * upload and download via SCP
 * upload and download via SFTP
 
@@ -17,13 +17,13 @@ login functionality.
 
 The copy of libssh2.dylib included with the framework is Intel-only, so you'll need to recompile for any other
 platform, including the iPhone. The Intel version of the framework works fine in the iPhone Simulator, however.
-Try [these instructions]("http://sites.google.com/site/olipion/cross-compilation/libssh2") if you're
+Try [these instructions](http://sites.google.com/site/olipion/cross-compilation/libssh2) if you're
 interested in using SSHCore on iPhone.
 
 SSHCore and libssh2 are both BSD-licensed, so you can use the framework pretty much any way you want.
 
-Many thanks to [Cocoaism]("http://cocoaism.com/how-to-bundle-dynamic-library-files-with-your-application/#comments")
-and [Cocoa is My Girlfriend]("http://www.cimgf.com/2008/09/04/cocoa-tutorial-creating-your-very-own-framework/") for the
+Many thanks to [Cocoaism](http://cocoaism.com/how-to-bundle-dynamic-library-files-with-your-application/#comments)
+and [Cocoa is My Girlfriend](http://www.cimgf.com/2008/09/04/cocoa-tutorial-creating-your-very-own-framework/) for the
 great tutorials that helped me put SSHCore together.
 
 Usage
@@ -87,8 +87,8 @@ All rights reserved.
 
 Includes a copy of libssh2, an open-source library released
 under the BSD licence. libssh2 is copyright the libssh2 team
-and respective authors. See http://www.libssh2.org for more
-information.
+and respective authors. See [http://www.libssh2.org](http://www.libssh2.org)
+for more information.
 
 Redistribution and use in source and binary forms,
 with or without modification, are permitted provided
