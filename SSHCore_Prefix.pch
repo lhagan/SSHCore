@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'SSHCore' target in the 'SSHCore' project.
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
