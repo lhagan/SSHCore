@@ -3,228 +3,354 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
-		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		F2346C4E11B0B640000493D0 /* libssh2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F2346C4D11B0B640000493D0 /* libssh2.1.dylib */; };
-		F2346C5311B0B668000493D0 /* libssh2_config.h in Headers */ = {isa = PBXBuildFile; fileRef = F2346C4F11B0B668000493D0 /* libssh2_config.h */; settings = {ATTRIBUTES = (); }; };
-		F2346C5411B0B668000493D0 /* libssh2_publickey.h in Headers */ = {isa = PBXBuildFile; fileRef = F2346C5011B0B668000493D0 /* libssh2_publickey.h */; settings = {ATTRIBUTES = (); }; };
-		F2346C5511B0B668000493D0 /* libssh2_sftp.h in Headers */ = {isa = PBXBuildFile; fileRef = F2346C5111B0B668000493D0 /* libssh2_sftp.h */; settings = {ATTRIBUTES = (); }; };
-		F2346C5611B0B668000493D0 /* libssh2.h in Headers */ = {isa = PBXBuildFile; fileRef = F2346C5211B0B668000493D0 /* libssh2.h */; settings = {ATTRIBUTES = (); }; };
-		F2346C5911B0B67F000493D0 /* SSHCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F2346C5711B0B67F000493D0 /* SSHCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2346C5A11B0B67F000493D0 /* SSHCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F2346C5811B0B67F000493D0 /* SSHCore.m */; };
-		F2346C5E11B0B76C000493D0 /* libssh2.1.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F2346C4D11B0B640000493D0 /* libssh2.1.dylib */; };
+		F2897B6F1395F36D009FAA05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897B6E1395F36D009FAA05 /* UIKit.framework */; };
+		F2897B711395F36D009FAA05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897B701395F36D009FAA05 /* Foundation.framework */; };
+		F2897B731395F36D009FAA05 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897B721395F36D009FAA05 /* CoreGraphics.framework */; };
+		F2897B791395F36D009FAA05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2897B771395F36D009FAA05 /* InfoPlist.strings */; };
+		F2897B7C1395F36D009FAA05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2897B7B1395F36D009FAA05 /* main.m */; };
+		F2897B7F1395F36D009FAA05 /* SSHCoreAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2897B7E1395F36D009FAA05 /* SSHCoreAppDelegate.m */; };
+		F2897B821395F36D009FAA05 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2897B801395F36D009FAA05 /* MainWindow.xib */; };
+		F2897B851395F36D009FAA05 /* SSHCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2897B841395F36D009FAA05 /* SSHCoreViewController.m */; };
+		F2897B881395F36D009FAA05 /* SSHCoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2897B861395F36D009FAA05 /* SSHCoreViewController.xib */; };
+		F2897B8F1395F36D009FAA05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897B6E1395F36D009FAA05 /* UIKit.framework */; };
+		F2897B901395F36D009FAA05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897B701395F36D009FAA05 /* Foundation.framework */; };
+		F2897B911395F36D009FAA05 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897B721395F36D009FAA05 /* CoreGraphics.framework */; };
+		F2897B991395F36D009FAA05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2897B971395F36D009FAA05 /* InfoPlist.strings */; };
+		F2897B9C1395F36D009FAA05 /* SSHCoreTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F2897B9B1395F36D009FAA05 /* SSHCoreTests.h */; };
+		F2897B9E1395F36D009FAA05 /* SSHCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2897B9D1395F36D009FAA05 /* SSHCoreTests.m */; };
+		F2897BB81395F768009FAA05 /* libgcrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897BB01395F768009FAA05 /* libgcrypt.a */; };
+		F2897BB91395F768009FAA05 /* libgpg-error.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897BB11395F768009FAA05 /* libgpg-error.a */; };
+		F2897BBA1395F768009FAA05 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2897BB51395F768009FAA05 /* libssh2.a */; };
+		F2897BBB1395F768009FAA05 /* simulator.m in Sources */ = {isa = PBXBuildFile; fileRef = F2897BB71395F768009FAA05 /* simulator.m */; };
+		F2897BBE1395F925009FAA05 /* SSHCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F2897BBD1395F925009FAA05 /* SSHCore.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		F2346C6111B0B78A000493D0 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F2346C5E11B0B76C000493D0 /* libssh2.1.dylib in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		F2897B921395F36D009FAA05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2897B611395F36C009FAA05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2897B691395F36D009FAA05;
+			remoteInfo = SSHCore;
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		32DBCF5E0370ADEE00C91783 /* SSHCore_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHCore_Prefix.pch; sourceTree = "<group>"; };
-		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* SSHCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSHCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		F2346C4D11B0B640000493D0 /* libssh2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssh2.1.dylib; sourceTree = "<group>"; };
-		F2346C4F11B0B668000493D0 /* libssh2_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_config.h; sourceTree = "<group>"; };
-		F2346C5011B0B668000493D0 /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_publickey.h; sourceTree = "<group>"; };
-		F2346C5111B0B668000493D0 /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_sftp.h; sourceTree = "<group>"; };
-		F2346C5211B0B668000493D0 /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2.h; sourceTree = "<group>"; };
-		F2346C5711B0B67F000493D0 /* SSHCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHCore.h; sourceTree = "<group>"; };
-		F2346C5811B0B67F000493D0 /* SSHCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHCore.m; sourceTree = "<group>"; };
+		F2897B6A1395F36D009FAA05 /* SSHCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2897B6E1395F36D009FAA05 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F2897B701395F36D009FAA05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F2897B721395F36D009FAA05 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F2897B761395F36D009FAA05 /* SSHCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSHCore-Info.plist"; sourceTree = "<group>"; };
+		F2897B781395F36D009FAA05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F2897B7A1395F36D009FAA05 /* SSHCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSHCore-Prefix.pch"; sourceTree = "<group>"; };
+		F2897B7B1395F36D009FAA05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2897B7D1395F36D009FAA05 /* SSHCoreAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSHCoreAppDelegate.h; sourceTree = "<group>"; };
+		F2897B7E1395F36D009FAA05 /* SSHCoreAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHCoreAppDelegate.m; sourceTree = "<group>"; };
+		F2897B811395F36D009FAA05 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F2897B831395F36D009FAA05 /* SSHCoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSHCoreViewController.h; sourceTree = "<group>"; };
+		F2897B841395F36D009FAA05 /* SSHCoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHCoreViewController.m; sourceTree = "<group>"; };
+		F2897B871395F36D009FAA05 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SSHCoreViewController.xib; sourceTree = "<group>"; };
+		F2897B8E1395F36D009FAA05 /* SSHCoreTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHCoreTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2897B961395F36D009FAA05 /* SSHCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSHCoreTests-Info.plist"; sourceTree = "<group>"; };
+		F2897B981395F36D009FAA05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F2897B9A1395F36D009FAA05 /* SSHCoreTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSHCoreTests-Prefix.pch"; sourceTree = "<group>"; };
+		F2897B9B1395F36D009FAA05 /* SSHCoreTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSHCoreTests.h; sourceTree = "<group>"; };
+		F2897B9D1395F36D009FAA05 /* SSHCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHCoreTests.m; sourceTree = "<group>"; };
+		F2897BB01395F768009FAA05 /* libgcrypt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgcrypt.a; sourceTree = "<group>"; };
+		F2897BB11395F768009FAA05 /* libgpg-error.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libgpg-error.a"; sourceTree = "<group>"; };
+		F2897BB21395F768009FAA05 /* libssh2_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_config.h; sourceTree = "<group>"; };
+		F2897BB31395F768009FAA05 /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_publickey.h; sourceTree = "<group>"; };
+		F2897BB41395F768009FAA05 /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_sftp.h; sourceTree = "<group>"; };
+		F2897BB51395F768009FAA05 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssh2.a; sourceTree = "<group>"; };
+		F2897BB61395F768009FAA05 /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2.h; sourceTree = "<group>"; };
+		F2897BB71395F768009FAA05 /* simulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = simulator.m; sourceTree = "<group>"; };
+		F2897BBC1395F925009FAA05 /* SSHCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHCore.h; sourceTree = "<group>"; };
+		F2897BBD1395F925009FAA05 /* SSHCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHCore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8DC2EF560486A6940098B216 /* Frameworks */ = {
+		F2897B671395F36D009FAA05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
-				F2346C4E11B0B640000493D0 /* libssh2.1.dylib in Frameworks */,
+				F2897B6F1395F36D009FAA05 /* UIKit.framework in Frameworks */,
+				F2897B711395F36D009FAA05 /* Foundation.framework in Frameworks */,
+				F2897B731395F36D009FAA05 /* CoreGraphics.framework in Frameworks */,
+				F2897BB81395F768009FAA05 /* libgcrypt.a in Frameworks */,
+				F2897BB91395F768009FAA05 /* libgpg-error.a in Frameworks */,
+				F2897BBA1395F768009FAA05 /* libssh2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2897B8A1395F36D009FAA05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2897B8F1395F36D009FAA05 /* UIKit.framework in Frameworks */,
+				F2897B901395F36D009FAA05 /* Foundation.framework in Frameworks */,
+				F2897B911395F36D009FAA05 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		034768DFFF38A50411DB9C8B /* Products */ = {
+		F2897B5F1395F36C009FAA05 = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* SSHCore.framework */,
+				F2897B741395F36D009FAA05 /* SSHCore */,
+				F2897B941395F36D009FAA05 /* SSHCoreTests */,
+				F2897B6D1395F36D009FAA05 /* Frameworks */,
+				F2897B6B1395F36D009FAA05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2897B6B1395F36D009FAA05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2897B6A1395F36D009FAA05 /* SSHCore.app */,
+				F2897B8E1395F36D009FAA05 /* SSHCoreTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* SSHKit */ = {
+		F2897B6D1395F36D009FAA05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				08FB77AEFE84172EC02AAC07 /* Classes */,
-				32C88DFF0371C24200C91783 /* Other Sources */,
-				089C1665FE841158C02AAC07 /* Resources */,
-				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
-				034768DFFF38A50411DB9C8B /* Products */,
+				F2897B6E1395F36D009FAA05 /* UIKit.framework */,
+				F2897B701395F36D009FAA05 /* Foundation.framework */,
+				F2897B721395F36D009FAA05 /* CoreGraphics.framework */,
 			);
-			name = SSHKit;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+		F2897B741395F36D009FAA05 /* SSHCore */ = {
 			isa = PBXGroup;
 			children = (
-				F2346C4D11B0B640000493D0 /* libssh2.1.dylib */,
-				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
-				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+				F2897BBC1395F925009FAA05 /* SSHCore.h */,
+				F2897BBD1395F925009FAA05 /* SSHCore.m */,
+				F2897B7D1395F36D009FAA05 /* SSHCoreAppDelegate.h */,
+				F2897B7E1395F36D009FAA05 /* SSHCoreAppDelegate.m */,
+				F2897B801395F36D009FAA05 /* MainWindow.xib */,
+				F2897B831395F36D009FAA05 /* SSHCoreViewController.h */,
+				F2897B841395F36D009FAA05 /* SSHCoreViewController.m */,
+				F2897B861395F36D009FAA05 /* SSHCoreViewController.xib */,
+				F2897B751395F36D009FAA05 /* Supporting Files */,
 			);
-			name = "External Frameworks and Libraries";
+			path = SSHCore;
 			sourceTree = "<group>";
 		};
-		089C1665FE841158C02AAC07 /* Resources */ = {
+		F2897B751395F36D009FAA05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5A0486A6940098B216 /* Info.plist */,
-				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+				F2897BAF1395F746009FAA05 /* Libraries */,
+				F2897B761395F36D009FAA05 /* SSHCore-Info.plist */,
+				F2897B771395F36D009FAA05 /* InfoPlist.strings */,
+				F2897B7A1395F36D009FAA05 /* SSHCore-Prefix.pch */,
+				F2897B7B1395F36D009FAA05 /* main.m */,
 			);
-			name = Resources;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+		F2897B941395F36D009FAA05 /* SSHCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				F2346C5711B0B67F000493D0 /* SSHCore.h */,
-				F2346C5811B0B67F000493D0 /* SSHCore.m */,
+				F2897B9B1395F36D009FAA05 /* SSHCoreTests.h */,
+				F2897B9D1395F36D009FAA05 /* SSHCoreTests.m */,
+				F2897B951395F36D009FAA05 /* Supporting Files */,
 			);
-			name = Classes;
+			path = SSHCoreTests;
 			sourceTree = "<group>";
 		};
-		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+		F2897B951395F36D009FAA05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				F2897B961395F36D009FAA05 /* SSHCoreTests-Info.plist */,
+				F2897B971395F36D009FAA05 /* InfoPlist.strings */,
+				F2897B9A1395F36D009FAA05 /* SSHCoreTests-Prefix.pch */,
 			);
-			name = "Linked Frameworks";
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+		F2897BAF1395F746009FAA05 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
-				D2F7E79907B2D74100F64583 /* CoreData.framework */,
-				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				F2897BB01395F768009FAA05 /* libgcrypt.a */,
+				F2897BB11395F768009FAA05 /* libgpg-error.a */,
+				F2897BB21395F768009FAA05 /* libssh2_config.h */,
+				F2897BB31395F768009FAA05 /* libssh2_publickey.h */,
+				F2897BB41395F768009FAA05 /* libssh2_sftp.h */,
+				F2897BB51395F768009FAA05 /* libssh2.a */,
+				F2897BB61395F768009FAA05 /* libssh2.h */,
+				F2897BB71395F768009FAA05 /* simulator.m */,
 			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		32C88DFF0371C24200C91783 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				F2346C4F11B0B668000493D0 /* libssh2_config.h */,
-				F2346C5011B0B668000493D0 /* libssh2_publickey.h */,
-				F2346C5111B0B668000493D0 /* libssh2_sftp.h */,
-				F2346C5211B0B668000493D0 /* libssh2.h */,
-				32DBCF5E0370ADEE00C91783 /* SSHCore_Prefix.pch */,
-			);
-			name = "Other Sources";
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		8DC2EF500486A6940098B216 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2346C5311B0B668000493D0 /* libssh2_config.h in Headers */,
-				F2346C5411B0B668000493D0 /* libssh2_publickey.h in Headers */,
-				F2346C5511B0B668000493D0 /* libssh2_sftp.h in Headers */,
-				F2346C5611B0B668000493D0 /* libssh2.h in Headers */,
-				F2346C5911B0B67F000493D0 /* SSHCore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		8DC2EF4F0486A6940098B216 /* SSHCore */ = {
+		F2897B691395F36D009FAA05 /* SSHCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "SSHCore" */;
+			buildConfigurationList = F2897BA11395F36D009FAA05 /* Build configuration list for PBXNativeTarget "SSHCore" */;
 			buildPhases = (
-				8DC2EF500486A6940098B216 /* Headers */,
-				8DC2EF520486A6940098B216 /* Resources */,
-				8DC2EF540486A6940098B216 /* Sources */,
-				8DC2EF560486A6940098B216 /* Frameworks */,
-				F2346C6111B0B78A000493D0 /* Copy Frameworks */,
+				F2897B661395F36D009FAA05 /* Sources */,
+				F2897B671395F36D009FAA05 /* Frameworks */,
+				F2897B681395F36D009FAA05 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SSHCore;
-			productInstallPath = "$(HOME)/Library/Frameworks";
-			productName = SSHKit;
-			productReference = 8DC2EF5B0486A6940098B216 /* SSHCore.framework */;
-			productType = "com.apple.product-type.framework";
+			productName = SSHCore;
+			productReference = F2897B6A1395F36D009FAA05 /* SSHCore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2897B8D1395F36D009FAA05 /* SSHCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2897BA41395F36D009FAA05 /* Build configuration list for PBXNativeTarget "SSHCoreTests" */;
+			buildPhases = (
+				F2897B891395F36D009FAA05 /* Sources */,
+				F2897B8A1395F36D009FAA05 /* Frameworks */,
+				F2897B8B1395F36D009FAA05 /* Resources */,
+				F2897B8C1395F36D009FAA05 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2897B931395F36D009FAA05 /* PBXTargetDependency */,
+			);
+			name = SSHCoreTests;
+			productName = SSHCoreTests;
+			productReference = F2897B8E1395F36D009FAA05 /* SSHCoreTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0867D690FE84028FC02AAC07 /* Project object */ = {
+		F2897B611395F36C009FAA05 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "SSHCore" */;
-			compatibilityVersion = "Xcode 3.1";
-			hasScannedForEncodings = 1;
-			mainGroup = 0867D691FE84028FC02AAC07 /* SSHKit */;
-			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			buildConfigurationList = F2897B641395F36C009FAA05 /* Build configuration list for PBXProject "SSHCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F2897B5F1395F36C009FAA05;
+			productRefGroup = F2897B6B1395F36D009FAA05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DC2EF4F0486A6940098B216 /* SSHCore */,
+				F2897B691395F36D009FAA05 /* SSHCore */,
+				F2897B8D1395F36D009FAA05 /* SSHCoreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8DC2EF520486A6940098B216 /* Resources */ = {
+		F2897B681395F36D009FAA05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				F2897B791395F36D009FAA05 /* InfoPlist.strings in Resources */,
+				F2897B821395F36D009FAA05 /* MainWindow.xib in Resources */,
+				F2897B881395F36D009FAA05 /* SSHCoreViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2897B8B1395F36D009FAA05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2897B991395F36D009FAA05 /* InfoPlist.strings in Resources */,
+				F2897B9C1395F36D009FAA05 /* SSHCoreTests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F2897B8C1395F36D009FAA05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		8DC2EF540486A6940098B216 /* Sources */ = {
+		F2897B661395F36D009FAA05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2346C5A11B0B67F000493D0 /* SSHCore.m in Sources */,
+				F2897B7C1395F36D009FAA05 /* main.m in Sources */,
+				F2897B7F1395F36D009FAA05 /* SSHCoreAppDelegate.m in Sources */,
+				F2897B851395F36D009FAA05 /* SSHCoreViewController.m in Sources */,
+				F2897BBB1395F768009FAA05 /* simulator.m in Sources */,
+				F2897BBE1395F925009FAA05 /* SSHCore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2897B891395F36D009FAA05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2897B9E1395F36D009FAA05 /* SSHCoreTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F2897B931395F36D009FAA05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2897B691395F36D009FAA05 /* SSHCore */;
+			targetProxy = F2897B921395F36D009FAA05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+		F2897B771395F36D009FAA05 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C1667FE841158C02AAC07 /* English */,
+				F2897B781395F36D009FAA05 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F2897B801395F36D009FAA05 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2897B811395F36D009FAA05 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F2897B861395F36D009FAA05 /* SSHCoreViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2897B871395F36D009FAA05 /* en */,
+			);
+			name = SSHCoreViewController.xib;
+			sourceTree = "<group>";
+		};
+		F2897B971395F36D009FAA05 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2897B981395F36D009FAA05 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -232,101 +358,149 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1DEB91AE08733DA50010E9CD /* Debug */ = {
+		F2897B9F1395F36D009FAA05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F2897BA01395F36D009FAA05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		F2897BA21395F36D009FAA05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SSHCore_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				GCC_PREFIX_HEADER = "SSHCore/SSHCore-Prefix.pch";
+				INFOPLIST_FILE = "SSHCore/SSHCore-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/SSHCore\"",
 				);
-				PRODUCT_NAME = SSHCore;
-				WRAPPER_EXTENSION = framework;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		1DEB91AF08733DA50010E9CD /* Release */ = {
+		F2897BA31395F36D009FAA05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_MODEL_TUNING = G5;
+				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SSHCore_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				GCC_PREFIX_HEADER = "SSHCore/SSHCore-Prefix.pch";
+				INFOPLIST_FILE = "SSHCore/SSHCore-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/SSHCore\"",
 				);
-				PRODUCT_NAME = SSHCore;
-				WRAPPER_EXTENSION = framework;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		1DEB91B208733DA50010E9CD /* Debug */ = {
+		F2897BA51395F36D009FAA05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSHCore.app/SSHCore";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSHCoreTests/SSHCoreTests-Prefix.pch";
+				INFOPLIST_FILE = "SSHCoreTests/SSHCoreTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		1DEB91B308733DA50010E9CD /* Release */ = {
+		F2897BA61395F36D009FAA05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSHCore.app/SSHCore";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSHCoreTests/SSHCoreTests-Prefix.pch";
+				INFOPLIST_FILE = "SSHCoreTests/SSHCoreTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "SSHCore" */ = {
+		F2897B641395F36C009FAA05 /* Build configuration list for PBXProject "SSHCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB91AE08733DA50010E9CD /* Debug */,
-				1DEB91AF08733DA50010E9CD /* Release */,
+				F2897B9F1395F36D009FAA05 /* Debug */,
+				F2897BA01395F36D009FAA05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "SSHCore" */ = {
+		F2897BA11395F36D009FAA05 /* Build configuration list for PBXNativeTarget "SSHCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB91B208733DA50010E9CD /* Debug */,
-				1DEB91B308733DA50010E9CD /* Release */,
+				F2897BA21395F36D009FAA05 /* Debug */,
+				F2897BA31395F36D009FAA05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		F2897BA41395F36D009FAA05 /* Build configuration list for PBXNativeTarget "SSHCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2897BA51395F36D009FAA05 /* Debug */,
+				F2897BA61395F36D009FAA05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+	rootObject = F2897B611395F36C009FAA05 /* Project object */;
 }
