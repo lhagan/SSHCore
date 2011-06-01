@@ -42,14 +42,6 @@ Make sure you add `-lz` to Other Compiler Flags in your project's settings as SS
     
     // get the libssh2 version
     [myssh libssh2ver];
-
-	// log in to server using password auth
-	[myssh initWithHost: @"192.168.0.100"
-				   port: 22
-				   user: @"user"
-					key: @""
-				 keypub: @""
-			   password: @"password"];
 	
    	// log in to server using password auth
    	[myssh initWithHost: @"192.168.0.100"
