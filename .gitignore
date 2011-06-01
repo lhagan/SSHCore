@@ -1,0 +1,12 @@
+*.pyc
+.DS_Store
+build
+*.log
+*.log.*
+logs
+.sass-cache
+*~
+~*
+*.pbxuser
+*.mode1v3
+xcuserdata
