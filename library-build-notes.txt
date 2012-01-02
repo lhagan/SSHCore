@@ -1,0 +1,179 @@
+#
+# set up working directory
+#
+export PREFIX=<path to your working directory>
+cd $PREFIX
+mkdir armv6 armv7 armv9 i386 universal
+
+#
+# download:
+#
+# gnupgp, libpgp-error, libgcrypt: http://www.gnupg.org/download/index.en.html
+# libssh2: http://www.libssh2.org/
+# unpack each into working directory
+
+#
+# configure and build for armv6
+#
+export DEVROOT=/Developer/Platforms/iPhoneOS.platform/Developer
+export SDKROOT=$DEVROOT/SDKs/iPhoneOS4.2.sdk
+export CC=$DEVROOT/usr/bin/gcc
+export LD=$DEVROOT/usr/bin/ld
+export CPP=$DEVROOT/usr/bin/cpp
+export CXX=$DEVROOT/usr/bin/g++
+export AR=$DEVROOT/usr/bin/ar
+export AS=$DEVROOT/usr/bin/as
+export NM=$DEVROOT/usr/bin/nm
+export CXXCPP=$DEVROOT/usr/bin/cpp
+export RANLIB=$DEVROOT/usr/bin/ranlib
+export LDFLAGS="-arch armv6 -pipe -no-cpp-precomp -isysroot $SDKROOT -L$PREFIX/armv6/lib"
+export CFLAGS="-arch armv6 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$PREFIX/armv6/include"
+export CXXFLAGS="-arch armv6 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$PREFIX/armv6"
+
+pushd gnupgp-1.4.11
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv6
+make && make install
+popd
+
+pushd libgpg-error-1.10
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv6 --enable-shared=no
+make && make install
+popd
+
+pushd libgcrypt-1.4.6
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv6 --enable-shared=no
+--with-gpg-error-prefix=$PREFIX/armv6
+make && make install
+
+pushd libssh2-1.2.7
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv6 --with-libgcrypt-prefix=$PREFIX/armv6
+make && make install
+popd
+
+#
+# configure and build for armv7
+#
+export DEVROOT=/Developer/Platforms/iPhoneOS.platform/Developer
+export SDKROOT=$DEVROOT/SDKs/iPhoneOS4.2.sdk
+export CC=$DEVROOT/usr/bin/gcc
+export LD=$DEVROOT/usr/bin/ld
+export CPP=$DEVROOT/usr/bin/cpp
+export CXX=$DEVROOT/usr/bin/g++
+export AR=$DEVROOT/usr/bin/ar
+export AS=$DEVROOT/usr/bin/as
+export NM=$DEVROOT/usr/bin/nm
+export CXXCPP=$DEVROOT/usr/bin/cpp
+export RANLIB=$DEVROOT/usr/bin/ranlib
+export LDFLAGS="-arch armv7 -pipe -no-cpp-precomp -isysroot $SDKROOT -L$PREFIX/armv7/lib"
+export CFLAGS="-arch armv7 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$PREFIX/armv7/include"
+export CXXFLAGS="-arch armv7 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$PREFIX/armv7"
+
+pushd gnupgp-1.4.11
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv7
+make && make install
+popd
+
+pushd libgpg-error-1.10
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv7 --enable-shared=no
+make && make install
+popd
+
+pushd libgcrypt-1.4.6
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv7 --enable-shared=no
+--with-gpg-error-prefix=$PREFIX/armv7
+make && make install
+
+pushd libssh2-1.2.7
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv7 --with-libgcrypt-prefix=$PREFIX/armv7
+make && make install
+popd
+
+#
+# configure and build for armv9
+#
+export DEVROOT=/Developer/Platforms/iPhoneOS.platform/Developer
+export SDKROOT=$DEVROOT/SDKs/iPhoneOS4.2.sdk
+export CC=$DEVROOT/usr/bin/gcc
+export LD=$DEVROOT/usr/bin/ld
+export CPP=$DEVROOT/usr/bin/cpp
+export CXX=$DEVROOT/usr/bin/g++
+export AR=$DEVROOT/usr/bin/ar
+export AS=$DEVROOT/usr/bin/as
+export NM=$DEVROOT/usr/bin/nm
+export CXXCPP=$DEVROOT/usr/bin/cpp
+export RANLIB=$DEVROOT/usr/bin/ranlib
+export LDFLAGS="-arch armv9 -pipe -no-cpp-precomp -isysroot $SDKROOT -L$PREFIX/armv9/lib"
+export CFLAGS="-arch armv9 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$PREFIX/armv9/include"
+export CXXFLAGS="-arch armv9 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$PREFIX/armv9"
+
+pushd gnupgp-1.4.11
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv9
+make && make install
+popd
+
+pushd libgpg-error-1.10
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv9 --enable-shared=no
+make && make install
+popd
+
+pushd libgcrypt-1.4.6
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv9 --enable-shared=no
+--with-gpg-error-prefix=$PREFIX/armv9
+make && make install
+
+pushd libssh2-1.2.7
+./configure --host=arm-apple-darwin10 --prefix=$PREFIX/armv9 --with-libgcrypt-prefix=$PREFIX/armv9
+make && make install
+popd
+
+#
+# configure and build for simulator (i386)
+#
+export DEVROOT=/Developer/Platforms/iPhoneSimulator.platform/Developer
+export INSTALLPREFIX=$PREFIX/i386
+export SDKROOT=$DEVROOT/SDKs/iPhoneSimulator3.2.sdk 
+export CC=$DEVROOT/usr/bin/gcc-4.2 
+export LD=$DEVROOT/usr/bin/ld 
+export CPP=$DEVROOT/usr/bin/cpp-4.2 
+export CXX=$DEVROOT/usr/bin/g++-4.2 
+export AR=$DEVROOT/usr/bin/ar 
+export AS=$DEVROOT/usr/bin/as 
+export NM=$DEVROOT/usr/bin/nm 
+export CXXCPP=$DEVROOT/usr/bin/cpp-4.2 
+export RANLIB=$DEVROOT/usr/bin/ranlib 
+export LDFLAGS="-arch i386 -pipe -no-cpp-precomp -isysroot $SDKROOT -L$INSTALLPREFIX/lib"
+export CFLAGS="-arch i386 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$INSTALLPREFIX/include"
+export CXXFLAGS="-arch i386 -pipe -no-cpp-precomp -isysroot $SDKROOT -I$INSTALLPREFIX/include/"
+export CFLAGS=-m32
+export CPPFLAGS=-m32
+
+pushd gnupg-1.4.11
+make clean
+./configure --host=i386-apple-darwin --prefix=$INSTALLPREFIX
+make && make install
+popd
+
+pushd libgpg-error-1.10
+make clean
+./configure --host=i386-apple-darwin --prefix=$INSTALLPREFIX --enable-shared=no
+make && make install
+popd
+
+pushd libgcrypt-1.4.6
+make clean
+./configure --host=i386-apple-darwin --prefix=$INSTALLPREFIX --enable-shared=no --with-gpg-error-prefix=$INSTALLPREFIX --disable-asm
+make && make install
+popd
+
+pushd libssh2-1.2.7
+make clean
+./configure --host=i386-apple-darwin --prefix=$INSTALLPREFIX --with-libgcrypt-prefix=$INSTALLPREFIX/../libraries/libgcrypt-1.4.6
+make && make install
+popd
+
+#
+# make universal binary
+#
+lipo -create i386/lib/libgcrypt.a armv6/lib/libgcrypt.a armv7/lib/libgcrypt.a-output armv9/lib/libgcrypt.a universal/libgcrypt.a
+lipo -create i386/lib/libgpg-error.a armv6/lib/libgpg-error.a armv7/lib/libgpg-error.a armv9/lib/libgpg-error.a -output universal/libgpg-error.a
+lipo -create i386/lib/libssh2.a armv6/lib/libssh2.a armv7/lib/libssh2.a armv9/lib/libssh2.a -output universal/libssh2.a

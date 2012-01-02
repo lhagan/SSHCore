@@ -67,12 +67,17 @@ Make sure you add `-lz` to Other Compiler Flags in your project's settings as SS
     [myssh closeSSH];
     [myssh release];
 
+Building Libraries
+------------------
+
+The precompiled library binaries (*.a) currently only support armv6 and i386. See `library-build-notes.txt` for steps to build universal binaries of these libraries for all current iOS hardware and the simulator.
 
 License
 -------
 
 Copyright (c) 2010-2011 Luke D Hagan
 All rights reserved.
+Released under the BSD license.
 
 Includes a copy of libssh2, an open-source library released
 under the BSD licence. libssh2 is copyright the libssh2 team
