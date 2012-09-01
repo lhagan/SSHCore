@@ -72,6 +72,11 @@ Building Libraries
 
 The precompiled library binaries (*.a) currently only support armv6 and i386. See `library-build-notes.txt` for steps to build universal binaries of these libraries for all current iOS hardware and the simulator.
 
+Using on OS X
+-------------
+
+This framework is targeted at iOS only, but Dan Finneran has written a [libssh2 wrapper for OS X](http://thebsdbox.co.uk/?p=257) based on SSHCore that you might want to check out.
+
 License
 -------
 
