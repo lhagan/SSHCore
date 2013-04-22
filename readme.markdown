@@ -2,6 +2,9 @@ SSHCore Framework
 ===========
 A Cocoa wrapper for libssh2
 
+Note: I'm obviously not actively developing SSHCore. You might want to try
+[libssh2-for-iOS](https://github.com/x2on/libssh2-for-iOS) instead.
+
 SSHCore is a start at wrapping libssh2 into a convenient package for use on iOS. It's currently
 just a proof of concept so functionality is limited and error handling is very minimal. The whole thing
 is also quite subject to change. The long-term goal of the project is to provide a simple, drop-in
@@ -17,10 +20,9 @@ present implementation is a demo project that can:
 Currently, SSHCore can only connect to a (stock) Mac OS X system using key-based authentication. The OS X SSH
 server is configured out of the box to reject password authentication, requiring instead interactive auth.
 
-Coming Soon(ish)
+To Do:
 ------
 
-* instructions for building libssh2 (and dependencies) to run on iOS
 * re-implementation of SCP & SFTP support (removed for version 0.1.0)
 * improved authentication support
 * actual error handling
