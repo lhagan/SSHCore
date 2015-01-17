@@ -2,8 +2,8 @@ SSHCore Framework
 ===========
 A Cocoa wrapper for libssh2
 
-Note: I'm obviously not actively developing SSHCore. You might want to try
-[libssh2-for-iOS](https://github.com/x2on/libssh2-for-iOS) instead.
+**Note: SSHCore is no longer supported or under active development. You might want to try
+[libssh2-for-iOS](https://github.com/x2on/libssh2-for-iOS) instead.**
 
 SSHCore is a start at wrapping libssh2 into a convenient package for use on iOS. It's currently
 just a proof of concept so functionality is limited and error handling is very minimal. The whole thing
